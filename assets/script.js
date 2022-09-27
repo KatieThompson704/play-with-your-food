@@ -58,7 +58,11 @@ function firstSearch(searchTerm) {
       );
     });
 }
-
+// TO DO: need to fix fetch call to resolve response error
+// Get variables from Fruity Vice API
+// Setup for loop for the random products pulled in foodfactsAPI
+// Append results to display on page
+// Review Grading criteria to check for additonal functionality
 function secondSearch(searchTerm) {
   var fruityViceURL = `https://fruityvice.com/api/fruit/${searchTerm}`;
   console.log(searchTerm);
