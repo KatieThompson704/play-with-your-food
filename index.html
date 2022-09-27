@@ -12,20 +12,25 @@
     />
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
+  <header class="header">
+    <h1 class="title">Play with Your Food!</h1>
+  </header>
   <body>
-    <header class="header">
-      <h1 class="title">Play with Your Food!</h1>
-      <h2>Tagline?</h2>
-    </header>
-    <main>
-      <aside class="aside">
-        <h2>Enter a type of food</h2>
-        <h2>Select a food type</h2>
-        <button class="button">Search</button>
-      </aside>
+    <main class="mui-container-fluid">
+      <div class="mui-row">
+        <div class="mui-col-md-4" id="search">
+          <input type="text" id="search-terms" placeholder="enter fruit here" />
+          <button id="srch-btn">Search</button>
+        </div>
+        <div class="mui-col-md-1" id="results"></div>
+      </div>
     </main>
     <footer>Thanks!</footer>
-
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/script.js"></script>
     <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
   </body>
