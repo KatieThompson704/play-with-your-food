@@ -62,7 +62,7 @@ function firstSearch(searchTerm) {
 function secondSearch(searchTerm) {
   var fruityViceURL = `https://fruityvice.com/api/fruit/${searchTerm}`;
   console.log(searchTerm);
-  fetch(fruityViceURL)
+  fetch(fruityViceURL, { method: "GET", mode: "no-cors" })
     .then(function (results) {
       console.log(results);
       return results.json();
