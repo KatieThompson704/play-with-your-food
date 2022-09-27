@@ -1,10 +1,6 @@
-var foodFactsURL = "https://world.openfoodfacts.org/api/2";
-// var foodFacts2 =
-//   "https://world.openfoodfacts.org/api/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=fruits";
-var searchTerm = $("#search-terms").val();
-var foodFacts2 = `https://us.openfoodfacts.org/cgi/search.pl?search_terms=${searchTerm}&search_simple=1&action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=fruits&json=true`;
-
-function search() {
+function search(searchTerm) {
+  var foodFacts2 = `https://us.openfoodfacts.org/cgi/search.pl?search_terms=${searchTerm}&search_simple=1&action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=fruits&json=true`;
+  console.log(searchTerm);
   fetch(foodFacts2)
     .then(function (results) {
       console.log(results);
@@ -12,7 +8,13 @@ function search() {
     })
     .then(function (data) {
       console.log(data);
+      console.log(data.products[0]);
+      console.log(data.products[0].brands_tags[0]);
+      console.log(data.products[0].product_name_en);
     });
 }
-
-$("#button").on("click", search());
+$("#srch-btn").on("click", function (event) {
+  var searchTerm = $("#search-terms").val();
+  event.preventDefault();
+  search(searchTerm);
+});
