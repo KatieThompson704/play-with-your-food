@@ -62,17 +62,21 @@ function firstSearch(searchTerm) {
 // Get variables from Fruity Vice API
 // Setup for loop for the random products pulled in foodfactsAPI
 // Append results to display on page
-// Review Grading criteria to check for additonal functionality
+// Review Grading criteria to check for additional functionality
 function secondSearch(searchTerm) {
-  var fruityViceURL = `https://fruityvice.com/api/fruit/${searchTerm}`;
+  var fruityViceURL = `https://cors-anywhere.herokuapp.com/https://fruityvice.com/api/fruit/${searchTerm}`;
+  console.log("my search term is: " + fruityViceURL);
   console.log(searchTerm);
-  fetch(fruityViceURL, { method: "GET", mode: "no-cors" })
+  fetch(fruityViceURL)
     .then(function (results) {
       console.log(results);
       return results.json();
     })
     .then(function (data) {
       console.log(data);
+      console.log("Order: " + data.order);
+      console.log("Family: " + data.family);
+      console.log("Genus: " + data.genus);
     });
 }
 
