@@ -12,19 +12,58 @@
     />
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
-  <header class="header">
-    <h1 class="title">Play with Your Food!</h1>
-  </header>
+
   <body>
+    <div class="mui-appbar" id="pwyf-title-bar">
+      <table width="100%">
+        <tr style="vertical-align: middle">
+          <td class="mui--appbar-height" align="center">
+            Play with Your Food!
+          </td>
+        </tr>
+      </table>
+    </div>
     <main class="mui-container-fluid">
       <div class="mui-row">
         <div class="mui-col-md-4" id="search">
           <input type="text" id="search-terms" placeholder="enter fruit here" />
           <button id="srch-btn">Search</button>
         </div>
-        <div class="mui-col-md-1" id="results"></div>
+        <div class="mui-col-md-6" id="results">
+          <table class="mui-table mui-table--bordered" id="nutr-label">
+            <thead>
+              <tr>
+                <th>Nutrition Facts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Serving Size:</td>
+              </tr>
+              <tr>
+                <td>Calories:</td>
+              </tr>
+              <tr>
+                <td>Total Fat:</td>
+              </tr>
+              <tr>
+                <td>Carbohydrates:</td>
+              </tr>
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; Sugar:</td>
+              </tr>
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; Fiber:</td>
+              </tr>
+              <tr>
+                <td>Protein:</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </main>
+
     <footer>Thanks!</footer>
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
