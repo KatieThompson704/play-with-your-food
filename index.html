@@ -12,19 +12,93 @@
     />
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
-  <header class="header">
-    <h1 class="title">Play with Your Food!</h1>
-  </header>
+
   <body>
+    <div class="mui-appbar" id="pwyf-title-bar">
+      <table width="100%">
+        <tr style="vertical-align: middle">
+          <td class="mui--appbar-height" align="center">
+            <b>Play with Your Food!</b>
+            <br />
+            <p>Our web application uses XXX and XXXX to do XXXX.</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
     <main class="mui-container-fluid">
       <div class="mui-row">
-        <div class="mui-col-md-4" id="search">
+        <div class="mui-col-md-2" id="search">
           <input type="text" id="search-terms" placeholder="enter fruit here" />
           <button id="srch-btn">Search</button>
         </div>
-        <div class="mui-col-md-1" id="results"></div>
+        <div class="mui-col-md-5" id="results">
+          <div id="product-description">
+            <span><b>Product Brand: </b></span>
+            <h2 id="product-brand"></h2>
+            <span><b>Product Name: </b></span>
+            <h2 id="product-name"></h2>
+
+            <table class="mui-table mui-table--bordered" id="nutr-label">
+              <thead>
+                <tr>
+                  <th>Nutrition Facts</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Serving Size: <span id="serving-size"></span></td>
+                </tr>
+                <tr>
+                  <td>Calories: <span id="calories"></span></td>
+                </tr>
+                <tr>
+                  <td>Total Fat: <span id="total-fat"></span></td>
+                </tr>
+                <tr>
+                  <td>Carbohydrates: <span id="carbohydrates"></span></td>
+                </tr>
+                <tr>
+                  <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp; Sugar: <span id="sugar"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp; Fiber: <span id="fiber"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Protein: <span id="protein"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="mui-col-md-3">
+          <table class="mui-table mui-table--bordered" id="science-facts">
+            <thead>
+              <tr>
+                <th>Science Facts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Order: <span id="order"></span></td>
+              </tr>
+              <tr>
+                <td>Family: <span id="family"></span></td>
+              </tr>
+              <tr>
+                <td>Genus: <span id="genus"></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- <img id="prod-image" /> -->
       </div>
     </main>
+
     <footer>Thanks!</footer>
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"

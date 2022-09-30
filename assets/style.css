@@ -1,7 +1,7 @@
-/* body {
+body {
   background-image: url(./images/download2.jpg);
   background-size: cover;
-} */
+}
 
 #search {
   border-style: solid;
@@ -9,4 +9,32 @@
   font-size: 24px;
   padding: 20px;
   border-radius: 10px;
+}
+
+#nutr-label,
+#science-facts {
+  border-style: solid;
+  background-color: antiquewhite;
+  font-size: 24px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#pwyf-title-bar {
+  border-style: solid;
+  background-color: pink;
+  font-size: 24px;
+  padding: 20px;
+  border-radius: 10px;
+  color: black;
+  margin: 15px;
+}
+#product-description {
+  border-style: solid;
+  background-color: antiquewhite;
+  font-size: 24px;
+  padding: 20px;
+  border-radius: 10px;
+  color: black;
+  margin: 15px;
 }
