@@ -23,6 +23,8 @@ function firstSearch(searchTerm) {
       var protein = data.products[0].nutriments.proteins;
       var proteinUnits = data.products[0].nutriments.proteins_unit;
       var thumbImage = data.products[0].selected_images.front.thumb.en;
+      var productName = data.products[0].product_name_en;
+      var brand = data.products[0].brands_tags[0];
       var nutritionalLabel = {
         carbohydrates: carbs + carbsUnits,
         sugar: sugar + sugarUnits,
@@ -31,6 +33,9 @@ function firstSearch(searchTerm) {
         calories: cal + calUnits,
         fat: fat + fatUnits,
         protein: protein + proteinUnits,
+        product_name: productName,
+        brand: brand,
+        prod_image: thumbImage,
       };
       console.log(nutritionalLabel);
       // console.log(data.products[0]);
@@ -48,6 +53,7 @@ function firstSearch(searchTerm) {
 
       // Additional data element: image of product
       console.log("Product Image info: " + thumbImage);
+      displayNutritionLabel(nutritionalLabel);
     });
 }
 // TO DO: need to fix fetch call to resolve response error
@@ -74,9 +80,28 @@ function secondSearch(searchTerm) {
         genus: genus,
       };
       console.log(scientificFacts);
+      displayScience(scientificFacts);
     });
 }
 
+function displayNutritionLabel(nutritionalLabel) {
+  $("#product-name").text(nutritionalLabel.product_name);
+  $("#product-brand").text(nutritionalLabel.brand);
+  $("#serving-size").text(nutritionalLabel.serving_size);
+  $("#calories").text(nutritionalLabel.calories);
+  $("#total-fat").text(nutritionalLabel.fat);
+  $("#carbohydrates").text(nutritionalLabel.carbohydrates);
+  $("#sugar").text(nutritionalLabel.sugar);
+  $("#fiber").text(nutritionalLabel.fiber);
+  $("#protein").text(nutritionalLabel.protein);
+  $("prod-image").attr("src", nutritionalLabel.prod_image);
+}
+
+function displayScience(scientificFacts) {
+  $("#order").text(scientificFacts.order);
+  $("#family").text(scientificFacts.family);
+  $("#genus").text(scientificFacts.genus);
+}
 $("#srch-btn").on("click", function (event) {
   var searchTerm = $("#search-terms").val();
   event.preventDefault();
