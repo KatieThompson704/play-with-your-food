@@ -38,29 +38,16 @@ function firstSearch(searchTerm) {
         prod_image: thumbImage,
       };
       console.log(nutritionalLabel);
-      // console.log(data.products[0]);
-      // // brand_tags: Brand of Product
-      // console.log(data.products[0].brands_tags[0]);
-      // // product_name_en: Name of Product
-      // console.log(data.products[0].product_name_en);
-      // console.log("Carbohydrates: " + carbs + " " + carbsUnits);
-      // console.log("Sugar: " + sugar + " " + sugarUnits);
-      // console.log("Fiber: " + fiber + " " + fiberUnits);
-      // console.log("Serving Size: " + servingSize);
-      // console.log("Calories: " + cal + " " + calUnits);
-      // console.log("Fat: " + fat + " " + fatUnits);
-      // console.log("Proteins: " + protein + " " + proteinUnits);
 
       // Additional data element: image of product
       console.log("Product Image info: " + thumbImage);
       displayNutritionLabel(nutritionalLabel);
     });
 }
-// TO DO: need to fix fetch call to resolve response error
-// Get variables from Fruity Vice API
-// Setup for loop for the random products pulled in foodfactsAPI
-// Append results to display on page
+// TO DO:
+// Setup for loop for the random products pulled in food facts API
 // Review Grading criteria to check for additional functionality
+
 function secondSearch(searchTerm) {
   var fruityViceURL = `https://cors-anywhere.herokuapp.com/https://fruityvice.com/api/fruit/${searchTerm}`;
   console.log(searchTerm);
@@ -97,6 +84,13 @@ function displayNutritionLabel(nutritionalLabel) {
   $("prod-image").attr("src", nutritionalLabel.prod_image);
 }
 
+function logSearch(searchTerm) {
+  var searchHistory = $("#search-history");
+  var foodButton = $("<button>").attr("id", "history-button");
+  foodButton.text(searchTerm);
+  searchHistory.append(foodButton);
+}
+
 function displayScience(scientificFacts) {
   $("#order").text(scientificFacts.order);
   $("#family").text(scientificFacts.family);
@@ -107,4 +101,5 @@ $("#srch-btn").on("click", function (event) {
   event.preventDefault();
   firstSearch(searchTerm);
   secondSearch(searchTerm);
+  logSearch(searchTerm);
 });
