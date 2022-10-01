@@ -38,3 +38,9 @@ body {
   color: black;
   margin: 15px;
 }
+
+#history-button {
+  margin-right: 1000px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
