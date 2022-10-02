@@ -45,12 +45,6 @@ body {
   margin-bottom: 5px;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: pink;
-  height: 30px;
-  text-align: center;
-  font-size: 24px;
+#search-terms {
+  width: 80%;
 }
