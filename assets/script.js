@@ -18,7 +18,7 @@ async function firstSearch(searchTerm) {
         modalEl.textContent =
           "OOPS! The word you searched, " +
           searchTerm +
-          ", is not a fruit that we have NUTRITIONAL data for! Please try again. Examples: Apple, Fig, or Raspberry";
+          ", is not a fruit that we have NUTRITIONAL data for! Please try searching a different fruit.";
         // show modal
         mui.overlay("on", modalEl);
       } else {
@@ -76,7 +76,7 @@ async function secondSearch(searchTerm) {
         modalEl.textContent =
           "OOPS! The word you searched, " +
           searchTerm +
-          ", is not a fruit that we have SCIENTIFIC data for! Please try again. Examples: Apple, Fig, or Raspberry";
+          ", is not a fruit that we have SCIENTIFIC data for! Please try searching a different fruit.";
         // show modal
         mui.overlay("on", modalEl);
       } else {
