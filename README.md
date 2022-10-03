@@ -1,6 +1,6 @@
 # find-my-fruit
 
-Get nutrition &amp; food facts about your favorite ingredients
+Get nutrition &amp; food facts about your favorite fruits!
 
 ## Description
 
