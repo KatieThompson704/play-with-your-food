@@ -63,3 +63,12 @@ main {
 #search-terms {
   width: 80%;
 }
+#modal-element {
+  width: 400px;
+  height: 300px;
+  margin: 100px auto;
+  background-color: pink;
+  border-radius: 10px;
+  font-size: xx-large;
+  color: red;
+}
