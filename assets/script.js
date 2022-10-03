@@ -90,7 +90,9 @@ function logSearch() {
   console.log(searchTermArray);
   // var searchHistory = $("#search-history");
   searchTermArray.forEach(function (searchTerm) {
-    var foodButton = $("<button>").attr("id", "history-button");
+    var foodButton = $("<button>")
+      .attr("id", "history-button")
+      .addClass("mui-btn mui-btn--raised mui-btn--primary");
     foodButton.text(searchTerm);
     foodButton.attr("value", searchTerm);
     foodButton.click(async function () {
@@ -113,7 +115,9 @@ $("#srch-btn").on("click", function (event) {
     searchTermArray.push(searchTerm);
     localStorage.setItem("searchTerms", JSON.stringify(searchTermArray));
     // add button for searched term
-    var foodButton = $("<button>").attr("id", "history-button");
+    var foodButton = $("<button>")
+      .attr("id", "history-button")
+      .addClass("mui-btn mui-btn--raised mui-btn--primary");
     foodButton.text(searchTerm);
     foodButton.attr("value", searchTerm);
     foodButton.click(async function () {
