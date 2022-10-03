@@ -10,35 +10,48 @@ async function firstSearch(searchTerm) {
     })
     .then(function (data) {
       console.log(data);
-      // Macronutrient Data Elements grams of Carbs(parent); grams of Sugar(child to parent Carbs);  total calories; total fat; grams of protein; Serving Size;
-      var carbs = data.products[0].nutriments.carbohydrates;
-      var carbsUnits = data.products[0].nutriments.carbohydrates_unit;
-      var sugar = data.products[0].nutriments.sugars;
-      var sugarUnits = data.products[0].nutriments.sugars_unit;
-      var fiber = data.products[0].nutriments.fiber;
-      var fiberUnits = data.products[0].nutriments.fiber_unit;
-      var servingSize = data.products[0].serving_size;
-      var cal = data.products[0].nutriments.energy_value;
-      var calUnits = data.products[0].nutriments.energy_unit;
-      var fat = data.products[0].nutriments.fat;
-      var fatUnits = data.products[0].nutriments.fat_unit;
-      var protein = data.products[0].nutriments.proteins;
-      var proteinUnits = data.products[0].nutriments.proteins_unit;
-      var productName = data.products[0].product_name_en;
-      var brand = data.products[0].brands_tags[0];
-      var nutritionalLabel = {
-        carbohydrates: carbs + carbsUnits,
-        sugar: sugar + sugarUnits,
-        fiber: fiber + fiberUnits,
-        serving_size: servingSize,
-        calories: cal + calUnits,
-        fat: fat + fatUnits,
-        protein: protein + proteinUnits,
-        product_name: productName,
-        brand: brand,
-      };
-      console.log(nutritionalLabel);
-      displayNutritionLabel(nutritionalLabel);
+      if (data.products.length === 0) {
+        console.log("No Food Facts found for " + searchTerm);
+        // initialize modal element
+        var modalEl = document.createElement("div");
+        modalEl.setAttribute("id", "nutrition-modal-element");
+        modalEl.textContent =
+          "OOPS! The word you searched, " +
+          searchTerm +
+          ", is not a fruit that we have NUTRITIONAL data for! Please try again. Examples: Apple, Fig, or Raspberry";
+        // show modal
+        mui.overlay("on", modalEl);
+      } else {
+        // Macronutrient Data Elements grams of Carbs(parent); grams of Sugar(child to parent Carbs);  total calories; total fat; grams of protein; Serving Size;
+        var carbs = data.products[0].nutriments.carbohydrates;
+        var carbsUnits = data.products[0].nutriments.carbohydrates_unit;
+        var sugar = data.products[0].nutriments.sugars;
+        var sugarUnits = data.products[0].nutriments.sugars_unit;
+        var fiber = data.products[0].nutriments.fiber;
+        var fiberUnits = data.products[0].nutriments.fiber_unit;
+        var servingSize = data.products[0].serving_size;
+        var cal = data.products[0].nutriments.energy_value;
+        var calUnits = data.products[0].nutriments.energy_unit;
+        var fat = data.products[0].nutriments.fat;
+        var fatUnits = data.products[0].nutriments.fat_unit;
+        var protein = data.products[0].nutriments.proteins;
+        var proteinUnits = data.products[0].nutriments.proteins_unit;
+        var productName = data.products[0].product_name_en;
+        var brand = data.products[0].brands_tags[0];
+        var nutritionalLabel = {
+          carbohydrates: carbs + carbsUnits,
+          sugar: sugar + sugarUnits,
+          fiber: fiber + fiberUnits,
+          serving_size: servingSize,
+          calories: cal + calUnits,
+          fat: fat + fatUnits,
+          protein: protein + proteinUnits,
+          product_name: productName,
+          brand: brand,
+        };
+        console.log(nutritionalLabel);
+        displayNutritionLabel(nutritionalLabel);
+      }
     });
 }
 
@@ -59,11 +72,11 @@ async function secondSearch(searchTerm) {
         console.log("No Food Facts found for " + searchTerm);
         // initialize modal element
         var modalEl = document.createElement("div");
-        modalEl.setAttribute("id", "modal-element");
+        modalEl.setAttribute("id", "science-modal-element");
         modalEl.textContent =
           "OOPS! The word you searched, " +
           searchTerm +
-          ", is not a fruit! Please try again.";
+          ", is not a fruit that we have SCIENTIFIC data for! Please try again. Examples: Apple, Fig, or Raspberry";
         // show modal
         mui.overlay("on", modalEl);
       } else {

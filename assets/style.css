@@ -63,12 +63,22 @@ main {
 #search-terms {
   width: 80%;
 }
-#modal-element {
+#nutrition-modal-element {
   width: 400px;
   height: 300px;
   margin: 100px auto;
   background-color: pink;
   border-radius: 10px;
-  font-size: xx-large;
+  font-size: x-large;
   color: red;
+}
+
+#science-modal-element {
+  width: 400px;
+  height: 300px;
+  margin: 100px auto;
+  background-color: lightblue;
+  border-radius: 10px;
+  font-size: x-large;
+  color: darkblue;
 }
