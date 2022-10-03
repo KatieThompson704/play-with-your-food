@@ -48,18 +48,3 @@ body {
 #search-terms {
   width: 80%;
 }
-
-footer {
-  position: absolute;
-  bottom: 0;
-  border-style: solid;
-  background-color: pink;
-  width: 96%;
-  font-size: 24px;
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  margin-left: 1.5%;
-  border-radius: 7px;
-}
