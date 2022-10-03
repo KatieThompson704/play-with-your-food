@@ -139,6 +139,133 @@ $("#srch-btn").on("click", function (event) {
     var foodButton = $("<button>")
       .attr("id", "history-button")
       .addClass("mui-btn mui-btn--raised mui-btn--primary");
+    foodButton.append();
+    foodButton.text(searchTerm);
+    foodButton.attr("value", searchTerm);
+    foodButton.click(async function () {
+      firstSearch(this.value).then(secondSearch(this.value));
+    });
+    searchHistory.append(foodButton);
+  }
+  firstSearch(searchTerm).then(secondSearch(searchTerm));
+});
+
+$("#apple").on("click", function (event) {
+  var searchTerm = $("#apple").text();
+  event.preventDefault();
+  if (searchTermArray.indexOf(searchTerm) === -1) {
+    searchTermArray.push(searchTerm);
+    localStorage.setItem("searchTerms", JSON.stringify(searchTermArray));
+    // add button for searched term
+    var foodButton = $("<button>")
+      .attr("id", "history-button")
+      .addClass("mui-btn mui-btn--raised mui-btn--primary");
+    foodButton.append();
+    foodButton.text(searchTerm);
+    foodButton.attr("value", searchTerm);
+    foodButton.click(async function () {
+      firstSearch(this.value).then(secondSearch(this.value));
+    });
+    searchHistory.append(foodButton);
+  }
+  firstSearch(searchTerm).then(secondSearch(searchTerm));
+});
+
+$("#blackberry").on("click", function (event) {
+  var searchTerm = $("#blackberry").text();
+  event.preventDefault();
+  if (searchTermArray.indexOf(searchTerm) === -1) {
+    searchTermArray.push(searchTerm);
+    localStorage.setItem("searchTerms", JSON.stringify(searchTermArray));
+    // add button for searched term
+    var foodButton = $("<button>")
+      .attr("id", "history-button")
+      .addClass("mui-btn mui-btn--raised mui-btn--primary");
+    foodButton.append();
+    foodButton.text(searchTerm);
+    foodButton.attr("value", searchTerm);
+    foodButton.click(async function () {
+      firstSearch(this.value).then(secondSearch(this.value));
+    });
+    searchHistory.append(foodButton);
+  }
+  firstSearch(searchTerm).then(secondSearch(searchTerm));
+});
+
+$("#cherry").on("click", function (event) {
+  var searchTerm = $("#cherry").text();
+  event.preventDefault();
+  if (searchTermArray.indexOf(searchTerm) === -1) {
+    searchTermArray.push(searchTerm);
+    localStorage.setItem("searchTerms", JSON.stringify(searchTermArray));
+    // add button for searched term
+    var foodButton = $("<button>")
+      .attr("id", "history-button")
+      .addClass("mui-btn mui-btn--raised mui-btn--primary");
+    foodButton.append();
+    foodButton.text(searchTerm);
+    foodButton.attr("value", searchTerm);
+    foodButton.click(async function () {
+      firstSearch(this.value).then(secondSearch(this.value));
+    });
+    searchHistory.append(foodButton);
+  }
+  firstSearch(searchTerm).then(secondSearch(searchTerm));
+});
+
+$("#guava").on("click", function (event) {
+  var searchTerm = $("#guava").text();
+  event.preventDefault();
+  if (searchTermArray.indexOf(searchTerm) === -1) {
+    searchTermArray.push(searchTerm);
+    localStorage.setItem("searchTerms", JSON.stringify(searchTermArray));
+    // add button for searched term
+    var foodButton = $("<button>")
+      .attr("id", "history-button")
+      .addClass("mui-btn mui-btn--raised mui-btn--primary");
+    foodButton.append();
+    foodButton.text(searchTerm);
+    foodButton.attr("value", searchTerm);
+    foodButton.click(async function () {
+      firstSearch(this.value).then(secondSearch(this.value));
+    });
+    searchHistory.append(foodButton);
+  }
+  firstSearch(searchTerm).then(secondSearch(searchTerm));
+});
+
+$("#fig").on("click", function (event) {
+  var searchTerm = $("#fig").text();
+  event.preventDefault();
+  if (searchTermArray.indexOf(searchTerm) === -1) {
+    searchTermArray.push(searchTerm);
+    localStorage.setItem("searchTerms", JSON.stringify(searchTermArray));
+    // add button for searched term
+    var foodButton = $("<button>")
+      .attr("id", "history-button")
+      .addClass("mui-btn mui-btn--raised mui-btn--primary");
+    foodButton.append();
+    foodButton.text(searchTerm);
+    foodButton.attr("value", searchTerm);
+    foodButton.click(async function () {
+      firstSearch(this.value).then(secondSearch(this.value));
+    });
+    searchHistory.append(foodButton);
+  }
+  firstSearch(searchTerm).then(secondSearch(searchTerm));
+});
+
+$("#raspberry").on("click", function (event) {
+  var searchTerm = $("#raspberry").text();
+  event.preventDefault();
+  if (searchTermArray.indexOf(searchTerm) === -1) {
+    searchTermArray.push(searchTerm);
+    localStorage.setItem("searchTerms", JSON.stringify(searchTermArray));
+    // add button for searched term
+    var foodButton = $("<button>")
+      .attr("id", "history-button")
+      .addClass("mui-btn mui-btn--raised mui-btn--primary");
+    foodButton.append();
     foodButton.text(searchTerm);
     foodButton.attr("value", searchTerm);
     foodButton.click(async function () {

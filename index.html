@@ -10,6 +10,10 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
 
@@ -36,6 +40,26 @@
           <button class="mui-btn mui-btn--raised mui-btn--accent" id="srch-btn">
             Search
           </button>
+          <div class="mui-dropdown">
+            <button
+              id="suggested-fruits"
+              class="mui-btn mui-btn--primary"
+              data-mui-toggle="dropdown"
+            >
+              Suggested Fruits
+              <span class="mui-caret"></span>
+            </button>
+            <ul class="mui-dropdown__menu mui-dropdown__menu--right">
+              <li id="apple">
+                <a href="#">Apple</a>
+              </li>
+              <li id="blackberry"><a href="#">Blackberry</a></li>
+              <li id="cherry"><a href="#">Cherry</a></li>
+              <li id="fig"><a href="#">Fig</a></li>
+              <li id="guava"><a href="#">Guava</a></li>
+              <li id="raspberry"><a href="#">Raspberry</a></li>
+            </ul>
+          </div>
           <h3 style="font-weight: bolder">Search History:</h3>
           <div id="search-history"></div>
         </div>

@@ -13,6 +13,10 @@ main {
   border-color: grey;
 }
 
+#suggested-fruits {
+  background-color: blue;
+}
+
 #science-facts {
   border-style: solid;
   border-color: grey;
@@ -43,6 +47,7 @@ main {
   color: black;
   margin: 15px;
 }
+
 #product-description {
   border-style: solid;
   background-color: lightblue;
@@ -64,21 +69,27 @@ main {
   width: 80%;
 }
 #nutrition-modal-element {
-  width: 400px;
+  position: relative;
+  width: 50%;
   height: 300px;
   margin: 100px auto;
   background-color: pink;
   border-radius: 10px;
   font-size: x-large;
   color: red;
+  border: 1px solid red;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #science-modal-element {
-  width: 400px;
+  position: relative;
+  width: 50%;
   height: 300px;
   margin: 100px auto;
-  background-color: lightblue;
+  background-color: plum;
   border-radius: 10px;
   font-size: x-large;
-  color: darkblue;
+  color: purple;
+  border: 1px solid purple;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
