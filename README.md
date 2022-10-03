@@ -4,7 +4,10 @@ Get nutrition &amp; food facts about your favorite ingredients
 
 ## Description
 
-This web application was developed to help connect fruit consumers with scientific information about and products containing their favorite fruits.
+This web application was developed to help connect fruit consumers with scientific information about and products containing their favorite fruits. The following APIs provided the source data for our web application:
+
+- Fruityvice (https://www.fruityvice.com/doc/index.html) and
+- OpenFoodFacts (https://openfoodfacts.github.io/api-documentation/#1GeneralInformation)
 
 ## Usage
 
